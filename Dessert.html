@@ -386,17 +386,14 @@ function Dessert({ image, name, category, price, addCart,isItem}) {
     setNum(prevNum => {
       if (prevNum > 1)  return prevNum - 1;
       else  {
-       
-          return 0;
+          setIsInCart(false);
+          return 1;
       }
     });
   };
   // Render the submit button based on whether the item is in the cart
-  const submitButton = !isInCart || !num ? (
-    <span className='center'>{icon} <span className='cent'>Add to Cart</span></span>
-
-  ) : (
-    <span className="padd">
+  const submitButton = isInCart || !num ? (
+     <span className="padd">
       <span className="minus" onClick={handleSub}>
         <i className="fas fa-minus-circle"></i>
 
@@ -406,6 +403,9 @@ function Dessert({ image, name, category, price, addCart,isItem}) {
         <i className="fas fa-plus-circle"></i>
       </span>
     </span>
+  ) : (
+    <span className='center'>{icon} <span className='cent'>Add to Cart</span></span>
+   
   );
 
   // Update cart when num changes
