@@ -230,6 +230,9 @@ ul{
     .flex{
         width: 90%;
     }
+    .app{
+        width: 70%;
+    }
     .main{
         flex-wrap: wrap;
     }
@@ -366,7 +369,7 @@ function Dessert({ image, name, category, price, addCart,isItem}) {
     setNum(1);
 
    // setInCart(true);
-    setIsInCart(true); // Set the item as in the cart
+    setIsInCart(false); // Set the item as in the cart
   };
   React.useEffect(() => {
         setIsInCart(isItem(name)); // Update when `isItemInCart` changes
