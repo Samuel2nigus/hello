@@ -12,19 +12,19 @@
     <style>
         @font-face {
             font-family: RedHatText-VariableFont_wght;
-            src: url(/assets/fonts/RedHatText-VariableFont_wght.ttf);
+            src: url(./assets/fonts/RedHatText-VariableFont_wght.ttf);
         }
         @font-face {
             font-family: RedHatText-SemiBold;
-            src: url(/assets/fonts/static/RedHatText-SemiBold.ttf);
+            src: url(./assets/fonts/static/RedHatText-SemiBold.ttf);
         }
         @font-face {
             font-family: RedHatText-Bold;
-            src: url(/assets/fonts/static/RedHatText-Bold.ttf);
+            src: url(./assets/fonts/static/RedHatText-Bold.ttf);
         }
         @font-face {
             font-family: RedHatText-Italic-VariableFont_wght;
-            src: url(/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf);
+            src: url(./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf);
         }
         body{
             font-family: RedHatText-VariableFont_wght;
@@ -351,7 +351,7 @@ ul{
      }
 ]
 function Dessert({ image, name, category, price, addCart,isItem}) {
-  const icon = <object data="/assets/images/icon-add-to-cart.svg" type="image/svg+xml"></object>;
+  const icon = <object data="./assets/images/icon-add-to-cart.svg" type="image/svg+xml"></object>;
   const [num, setNum] = React.useState(1);
   const [isInCart, setIsInCart] = React.useState(false); // Track if the item is in the cart
  
@@ -462,7 +462,7 @@ function Dessert({ image, name, category, price, addCart,isItem}) {
          return (isOrderConfirmed ?
             <div className="app">
  <div className="modal">
-                    <object data="/assets/images/icon-order-confirmed.svg" type="image/svg+xml"></object>
+                    <object data="./assets/images/icon-order-confirmed.svg" type="image/svg+xml"></object>
                     <h2>Order Confirmed!</h2>
                     <p>We hope you enjoy your food!</p>
                     <ul className='high'>{list.map((item,i)=><MyCart {...item} key={i} imag='image' />)}</ul>
@@ -491,12 +491,12 @@ function Dessert({ image, name, category, price, addCart,isItem}) {
                 <p>order total</p>  
                 <p style={{fontFamily: 'RedHatText-Bold', fontSize: '1.6em'}}>{`$${totalCost}`}</p> 
                 </div>
-                <p><object data="/assets/images/icon-carbon-neutral.svg" type="image/svg+xml"></object>this is a carbon neutral delivery</p> 
+                <p><object data="./assets/images/icon-carbon-neutral.svg" type="image/svg+xml"></object>this is a carbon neutral delivery</p> 
                 <button className='confirm' onClick={confirmOrder}>Confirm Order</button>
                 {modal()}
                 </div>
                 </div> : <div className='side'>
-                    <object data="/assets/images/illustration-empty-cart.svg" type="image/svg+xml" style={{display: 'inline-block',marginLeft: '30px'}}></object>
+                    <object data="./assets/images/illustration-empty-cart.svg" type="image/svg+xml" style={{display: 'inline-block',marginLeft: '30px'}}></object>
                     <p style={{textAlign:'center'}}>your added will apear here</p>
                     </div>}
                 </div>
@@ -516,7 +516,7 @@ function Dessert({ image, name, category, price, addCart,isItem}) {
              <li style={{color: 'rgb(47, 48, 47)' }}>@${price}</li>     
              <li className='mid'>${price*num}</li>  
 
-              {trash ? <button className='middle' onClick={()=>removeCart(name)} style={{cursor: 'pointer'}}><object data="/assets/images/icon-remove-item.svg" type="image/svg+xml"></object></button> : null} 
+              {trash ? <button className='middle' onClick={()=>removeCart(name)} style={{cursor: 'pointer'}}><object data="./assets/images/icon-remove-item.svg" type="image/svg+xml"></object></button> : null} 
               </div>
             </div>
             </div> : null
