@@ -365,11 +365,7 @@ function Dessert({ image, name, category, price, addCart,isItem}) {
   const [isInCart, setIsInCart] = React.useState(false); // Track if the item is in the cart
  
   const handleAddToCart = () => {
-   // addCart(name, price, num);
-    setNum(1);
-
-   // setInCart(true);
-    setIsInCart(false); // Set the item as in the cart
+    setIsInCart(true); 
   };
   React.useEffect(() => {
         setIsInCart(isItem(name)); // Update when `isItemInCart` changes
