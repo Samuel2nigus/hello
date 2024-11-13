@@ -166,6 +166,9 @@
     position: relative;
     bottom : 20px;
 }
+        .far{
+            color: white;
+        }
 #flexer{
     display: flex;
     margin: 25px;   
@@ -521,7 +524,7 @@ function Dessert({ image, name, category, price, addCart,isItem}) {
              <li style={{color: 'rgb(47, 48, 47)' }}>@${price}</li>     
              <li className='mid'>${price*num}</li>  
 
-              {trash ? <button className='middle' onClick={()=>removeCart(name)} style={{cursor: 'pointer'}}><object data="./assets/images/icon-remove-item.svg" type="image/svg+xml"></object></button> : null} 
+              {trash ? <button className='middle' onClick={()=>removeCart(name)} style={{cursor: 'pointer'}}><i class="far fa-times-circle fa-2x"></i></button> : null} 
               </div>
             </div>
             </div> : null
